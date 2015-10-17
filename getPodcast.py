@@ -32,12 +32,13 @@ def main():
         first_mp3_url = re.findall(r1_comp, r.text)[0]
         radio_name = re.findall(r2_comp, r.text)[0]
         title = re.findall(r3_comp, r.text)[0]
+        final_filename = radio_name + '_' + title + '.mp3'
 
         f = open('latest.txt', 'r+')
-        if (first_mp3_url + '\n') not in f.readlines():
-            print("downloading " + first_mp3_url)
-            requests_file(first_mp3_url, radio_name + '_' + title + '.mp3')
-            f.write(first_mp3_url + '\n')
+        if (final_filename + '\n') not in f.readlines():
+            print("downloading " + final_filename)
+            requests_file(first_mp3_url, final_filename)
+            f.write(final_filename + '\n')
         f.flush()
         f.close()
     print("done")
