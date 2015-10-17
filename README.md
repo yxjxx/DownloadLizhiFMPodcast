@@ -3,7 +3,7 @@
 1. sign in to [justcast](http://www.thejustcast.com/) using you dropbox accout.
 2. create a podcast, and get your podcast rss url.
 3. download mp3 files to specific dropbox folder using the python script.
-4. subscirbe to the rss url above in your farvoite podcast client such as overcast or downcast.
+4. subscirbe to the rss url above in your favorite podcast client such as overcast or downcast.
 5. plus you can set a crontab task in your vps server to run the script every Friday, and you get it completely automatically.
 
 
