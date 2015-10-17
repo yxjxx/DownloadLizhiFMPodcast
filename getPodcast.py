@@ -3,6 +3,11 @@ import requests
 import re
 import io
 
+# 罗辑思维，晓松奇谈
+fm_list = ['http://www.lizhi.fm/17248/',
+           'http://www.lizhi.fm/679472/',
+           ]
+
 
 def requests_file(file_url, filename):
     r = requests.get(file_url)
@@ -14,20 +19,27 @@ def requests_file(file_url, filename):
 
 
 def main():
-    r = requests.get('http://www.lizhi.fm/415593/')
+    for fm in fm_list:
+        r = requests.get(fm)
 
-    r1 = r'data-url="(.*?\.mp3)"'
-    r1_comp = re.compile(r1)
-    r2 = r'data-radio-name="(.*?)"'
-    r2_comp = re.compile(r2)
-    r3 = r'data-title="(.*?)"'
-    r3_comp = re.compile(r3)
+        r1 = r'data-url="(.*?\.mp3)"'
+        r1_comp = re.compile(r1)
+        r2 = r'data-radio-name="(.*?)"'
+        r2_comp = re.compile(r2)
+        r3 = r'data-title="(.*?)"'
+        r3_comp = re.compile(r3)
 
-    first_mp3_url = re.findall(r1_comp, r.text)[0]
-    radio_name = re.findall(r2_comp, r.text)[0]
-    title = re.findall(r3_comp, r.text)[0]
+        first_mp3_url = re.findall(r1_comp, r.text)[0]
+        radio_name = re.findall(r2_comp, r.text)[0]
+        title = re.findall(r3_comp, r.text)[0]
 
-    requests_file(first_mp3_url, radio_name + '_' + title + '.mp3')
+        f = open('latest.txt', 'r+')
+        if (first_mp3_url + '\n') not in f.readlines():
+            print("downloading " + first_mp3_url)
+            requests_file(first_mp3_url, radio_name + '_' + title + '.mp3')
+            f.write(first_mp3_url + '\n')
+        f.flush()
+        f.close()
     print("done")
 
 
