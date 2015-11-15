@@ -31,7 +31,7 @@ def main():
         soup_result = soup.find(attrs={'class':'block title ellipsis'})
         # print(soup_result.text)
         first_mp3_url = re.findall(r1_comp, r.text)[0]
-        final_filename = soup_result.text + '_' + '.mp3'
+        final_filename = soup_result.text + '.mp3'
 
         f = open('latest.txt', 'r+')
         if (final_filename + '\n') not in f.readlines():
