@@ -4,9 +4,11 @@ import requests
 import re
 import io
 
-# 罗辑思维，晓松奇谈
-fm_list = ['http://www.lizhi.fm/17248/',
+# 罗辑思维，晓松奇谈，吴晓波频道
+fm_list = [
+           'http://www.lizhi.fm/17248/',
            'http://www.lizhi.fm/679472/',
+           'http://www.lizhi.fm/176647/'
            ]
 
 

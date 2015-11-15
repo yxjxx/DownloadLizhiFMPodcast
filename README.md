@@ -7,4 +7,9 @@
 5. plus you can set a crontab task in your vps server to run the script every Friday, and you get it completely automatically.
 
 
+##Update at 2015/11/15
+
+I find lizhi.fm have supplied rss feed for part channels, so you can subsribe to them use general podcast client.
+
+http://nj.lizhi.fm/rss/17248.xml for 罗辑思维
 
