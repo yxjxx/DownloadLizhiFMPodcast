@@ -3,6 +3,8 @@
 import requests
 import re
 import io
+import os
+import shutil
 
 # 罗辑思维，晓松奇谈，吴晓波频道
 fm_list = [
@@ -19,6 +21,18 @@ def requests_file(file_url, filename):
             file.write(r.content)
             file.flush()
             file.close()
+
+
+def move_episodes():
+    source = os.listdir('.')
+    for file in source:
+        if file.endswith('.mp3'):
+            index = file.find('_')
+            folder_name = file[:index]
+            if folder_name not in source:
+                os.mkdir(folder_name)
+            destination = './' + folder_name + '/'
+            shutil.move(file, destination)
 
 
 def main():
@@ -44,6 +58,7 @@ def main():
             f.write(final_filename + '\n')
         f.flush()
         f.close()
+    move_episodes()
     print("done")
 
 
