@@ -9,7 +9,19 @@
 
 ##Update at 2015/11/15
 
-I find lizhi.fm have supplied rss feed for part channels, so you can subscribe to them use general podcast client.
+I find lizhi.fm has supplied rss feed for part channels, so you can subscribe to them use general podcast client.
 
 http://nj.lizhi.fm/rss/17248.xml for 罗辑思维
+
+#Update at 2015/11/27
+
+Inspired by friends at [v2ex](https://www.v2ex.com/t/239246#reply7), ximalaya has supplied rss feed for most channels.
+
+http://www.ximalaya.com/album/321701.xml 晓松奇谈 
+
+http://www.ximalaya.com/album/239463.xml 罗辑思维 
+
+http://www.ximalaya.com/album/321705.xml 今晚 80 后 
+
+http://www.ximalaya.com/album/269179.xml 吴晓波频道
 
