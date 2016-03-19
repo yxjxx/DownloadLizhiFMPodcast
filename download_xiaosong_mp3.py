@@ -2,9 +2,10 @@
 # @Author: yxjxx
 # @Date:   2016-03-20 00:19:37
 # @Last Modified by:   yxjxx
-# @Last Modified time: 2016-03-20 02:08:27
+# @Last Modified time: 2016-03-20 02:24:24
 from ffmpy import FF
 import requests
+import os
 from bs4 import BeautifulSoup
 from you_get import *
 from you_get.cli_wrapper import *
@@ -28,7 +29,7 @@ def main():
     file_name = soup_result.img['title']
     video_name = file_name + '.mp4'
     audio_name = file_name + '.mp3'
-    print(video_name, audio_name, video_url)
+    print(video_name, video_url)
     iqiyi.download(video_url, output_dir='.', info_only=False,
                    merge=True, stream_id='topspeed', caption=False,
                    output_filename=video_name)
@@ -37,8 +38,11 @@ def main():
     outputs = {audio_name: None}
     ff = FF(inputs=inputs, outputs=outputs)
     print(ff.cmd_str)
+    print('converting...')
     ff.run()
-    print('done')
+    print('mp4 convert to mp3 success')
+    os.remove(video_name)
+    print('delete video file success')
 
 
 if __name__ == '__main__':
