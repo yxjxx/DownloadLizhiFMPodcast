@@ -15,7 +15,7 @@ http://nj.lizhi.fm/rss/17248.xml for 罗辑思维
 
 ##Update at 2015/11/27
 
-Inspired by friends at [v2ex](https://www.v2ex.com/t/239246#reply7), ximalaya has supplied rss feed for most channels.
+Inspired by friends at [v2ex](https://www.v2ex.com/t/239246), ximalaya has supplied rss feed for most channels.
 
 http://www.ximalaya.com/album/321701.xml 晓松奇谈 
 
@@ -24,4 +24,16 @@ http://www.ximalaya.com/album/239463.xml 罗辑思维
 http://www.ximalaya.com/album/321705.xml 今晚 80 后 
 
 http://www.ximalaya.com/album/269179.xml 吴晓波频道
+
+##Update at 2016/4/29
+
+http://justcast.herokuapp.com/shows/yxjxx-db50f2f7-d86f-4749-960b-5a85740f9687/audioposts.rss 晓松奇谈 (个人维护中...)
+
+http://www.ximalaya.com/album/239463.xml 罗辑思维 
+
+http://www.ximalaya.com/album/269179.xml 吴晓波频道 
+
+http://www.ximalaya.com/album/3529551.xml 今晚 80 后 
+
+
 
