@@ -6,9 +6,8 @@ import io
 from bs4 import BeautifulSoup
 
 
-# 罗辑思维，晓松奇谈
-fm_list = ['http://www.kaolafm.com/zj/DgD9XxEQ.html#list',
-           # 'http://m.ximalaya.com/1412917/album/239463',
+# 晓松奇谈
+fm_list = ['http://www.kaolafm.com/zj/DgD9XxEQ.html#list'
            ]
 
 
